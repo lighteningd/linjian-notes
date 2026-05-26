@@ -13,7 +13,7 @@ export default function App() {
   const { toggle } = useTheme();
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/linjian-notes">
       <CustomCursor />
       <ParticleBackground />
       <Leaves />

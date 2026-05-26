@@ -7,6 +7,16 @@
     <title>林间笔记</title>
   </head>
   <body>
+    <script>
+      // GitHub Pages SPA redirect restore
+      (function() {
+        var redirect = sessionStorage.getItem('spa-redirect');
+        if (redirect) {
+          sessionStorage.removeItem('spa-redirect');
+          history.replaceState(null, '', redirect);
+        }
+      })();
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
