@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>林间笔记</title>
+  <script>
+    // Store full path and redirect to index
+    sessionStorage.setItem('spa-redirect', location.pathname + location.search + location.hash);
+    location.replace('/linjian-notes/');
+  </script>
+</head>
+<body>
+  <p>Redirecting...</p>
+</body>
+</html>
