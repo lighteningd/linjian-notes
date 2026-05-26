@@ -21,6 +21,9 @@ export default function PostPage() {
     fetch(`${import.meta.env.BASE_URL}posts/${found.file}`)
       .then(r => r.text())
       .then(md => {
+        // Strip YAML front matter
+        md = md.replace(/^---[\s\S]*?---\s*\n/, '');
+
         // Extract headings for TOC
         const headings: Array<{ id: string; text: string; level: number }> = [];
         const headRegex = /^(#{1,3})\s+(.+)$/gm;
