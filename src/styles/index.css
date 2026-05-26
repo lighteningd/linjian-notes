@@ -80,9 +80,9 @@ em { font-style: normal; color: var(--accent); font-weight: 600; }
   box-shadow: 0 1px 8px rgba(0,0,0,.04);
 }
 [data-theme="dark"] .nav.scrolled { background: rgba(26,26,24,.88); }
-.nav-logo { display: flex; align-items: center; gap: 8px; font-size: 1.1rem; font-weight: 600; letter-spacing: .01em; }
+.nav-logo { display: flex; align-items: center; gap: 8px; font-size: 1.1rem; font-weight: 600; letter-spacing: .01em; white-space: nowrap; flex-shrink: 0; }
 .nav-links { display: flex; gap: 36px; list-style: none; }
-.nav-links a { position: relative; font-size: .9rem; color: var(--text-secondary); transition: color .2s; }
+.nav-links a { position: relative; font-size: .9rem; color: var(--text-secondary); transition: color .2s; white-space: nowrap; }
 .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1.5px; background: var(--accent); transition: width .3s var(--ease-out); }
 .nav-links a:hover { color: var(--text); }
 .nav-links a:hover::after { width: 100%; }

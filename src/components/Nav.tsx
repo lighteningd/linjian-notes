@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 interface NavProps {
   onThemeToggle: () => void;
@@ -8,6 +8,7 @@ interface NavProps {
 export default function Nav({ onThemeToggle }: NavProps) {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -17,7 +18,7 @@ export default function Nav({ onThemeToggle }: NavProps) {
 
   const scrollTo = (hash: string) => {
     if (location.pathname !== '/') {
-      window.location.href = '/' + hash;
+      navigate('/' + hash);
       return;
     }
     const el = document.querySelector(hash);

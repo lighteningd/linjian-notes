@@ -18,7 +18,7 @@ export default function PostPage() {
     if (!found) { setLoading(false); return; }
     setPost(found);
 
-    fetch(`/posts/${found.file}`)
+    fetch(`${import.meta.env.BASE_URL}posts/${found.file}`)
       .then(r => r.text())
       .then(md => {
         // Extract headings for TOC
