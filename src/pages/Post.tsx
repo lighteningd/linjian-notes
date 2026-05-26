@@ -132,7 +132,7 @@ export default function PostPage() {
                 <h3 className="related-title">📎 相关文章</h3>
                 <div className="related-grid">
                   {related.map(r => (
-                    <div key={r.id} className="related-card" onClick={() => navigate(`/post/${r.category}/${r.id}`)}>
+                    <div key={r.id} className="related-card" onClick={() => { window.scrollTo(0, 0); navigate(`/post/${r.category}/${r.id}`); }}>
                       <h4>{r.cover} {r.title}</h4>
                       <span className="r-date">{r.date.replace(/-/g, ' · ')}</span>
                     </div>
